@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Proof of Concept Scoping 2}
+\author{Jesse Grubesich}
+\date{August 2019}
+
+\begin{document}
+
+\maketitle
+
+\section{Updated Overview}
+There was a significant number of jobs that I had to consider for gains and pains that in my last Scoping Exercise. They included music transcription, language translation, script transcription, and referencing and formatting. In this exercise, I have decided to focus more on the linguistic and musical elements, as these are the defining characteristics of my paper, my paper being about, put simply, the difference in musical creation methods between Croatian natives and Croatians living in Australia.
+
+\section{Latin-Cyrillic Transcription}
+This activity has a lot of pains and numerous potential gains. To decompose the task, I will essentially be taking a Cyrillic word, and finding the equivalent of that word in the Latin script. To break it down even further, I must change every single Cyrillic letter into a Latin one, letter by letter. There are easily-recognisable regularities and repetitions in the data; there are 30 letters in the Serbian Cyrillic alphabet, and naturally every word is made up of a combination of these letters. The step-by-step guide therefore goes as such:
+\begin{enumerate}
+\item Find an article written in Serbian Cyrillic
+\item Transcribe every letter from its Cyrillic form to the Latin equivalent
+\item Potentially use translated parts as quotes in my paper
+\end{enumerate}
+It should be quite easy to think computationally with this task. There is a limited number of data that I am working with (30 letters). It should be possible to write a script that automatically and accurately transcribes these letters into either the Croatian Latin alphabet, as there are no further things to consider such as grammar and spelling (Croatian and Serbian share grammar rules and almost always have the same word in both languages, just in different scripts). It should be possible to tell a computer that, for example, [Cyrillic 'backwards N']=I and H=N (Overleaf apparently cannot read Cyrillic letters, hence the \textit{[Cyrillic 'backwards N']}). The input would be the Cyrillic letter, and the output would be its Latin equivalent, or vice-versa if translating the other way around.
+
+\section{Serbian-Croatian-English Translation}
+Another thing I would like to do would be to be able to translate Serbian into Croatian  then Croatian into English, or any combination of the three. This step could potentially follow on from the previous step. To decompose the task, I will be taking a Croatian or Serbian word, finding the English equivalent of the word, or at least its closest translation, and then translating the word. Obviously, this process would be repeated for however long I would need it to be. There is another, more complicated part to this decomposition; I will also need to grapple with grammar and word-order. After a sentence is translated, I would need to reorder the sentence to have it make sense in English (or the other two languages, if translating from English).
+
+Computationally, the first part would be simple. The word is the input, and its translated form, even if that ends up being two words (njemu=to him, for example), is the output. This is repetitive, consistent data. The next part would be harder. I would have to order the computer to perform sentence inversions and word reordering. To decompose the task computationally, I would first need to give the computer a sentence, for instance, "to njemu daj", and have the computer translate it word for word - "that to him give". I would then need to order the computer to change the word order to make grammatical sense in English - "give that to him". I am unsure at this stage how I would do that, but I expect I would be able to give the computer some kind of commands that would identify the subject, object, adjectives, verbs, etc. in a sentence, and then be able to order them into subject-verb-object sentence structure. Sentence structure is looser in Croatian and Serbian - "to njemu daj" is just as valid as "daj to njemu" - so translating from English to Croatian or Serbian should not have this problem.
+
+I have written the steps to complete this task below. Note that I believe it would be easier to translate Croatian to English rather than Serbian to English, just because it would be easier to create commands for this that are all in Latin rather than some being in Latin and Cyrillic, so I have created optional steps that follow on from the previous problem, 'Latin-Cyrillic Transcription'. Also note that the computational thinking for alleviating pains and creating gains applies primarily to steps 2-4.
+\begin{enumerate}
+\item Find an article written in Croatian or Serbian
+\item (Optional) transcribe every letter from its Cyrillic form to the Latin equivalent
+\item Translate words from one language to another
+\item (If translating from Croatian or Serbian to English) fix word order
+\item Potentially use translated quotes in my paper
+\end{enumerate}
+
+\section{Music Transcription}
+For this job, I would be taking a piece of music and transcribing the notes on paper. When viewing the task in its decomposed form, I would have to do the following: first, I would find a piece of music. Second, I might optionally have to isolate a section of the music, be it rhythm, harmony and melody (I suspect harmony and melody would have to be separated). Third, I would have to identify the notes, BPM, and key signature of the music I want to transcribe. Fourth, I would transcribe this music into musical manuscript to put it on the page.
+
+Computationally, I would have to give the computer commands to recognise notes, tempo, and other events in the music. I suspect that I would need to give the computer a mix of letters and graphics -  eg. Ab = [insert graphic of Ab on a stave of manuscript]. The problem here would be in getting the computer to identify exactly what, for example, an Ab is; I don't know how I would make the computer be able to identify music. I would then need to create commands for the computer to insert a piece of musical manuscript on the page, and then I would need to give the computer commands to transcribe the analysed phrase, whether melody, harmony, or percussion/rhythm, onto the manuscript paper.
+
+The steps would go as so:
+\begin{enumerate}
+\item Find music
+\item Extract musical phrase that I want to analyse and transcribe
+\item Analyse the music
+\item Create musical manuscript in document
+\item Transcribe musical manuscript in document
+\end{enumerate}
+\section{Formatting and Bilbiography/Discography}
+At this stage, I am fairly uninterested in creating a script that does this, as I am much more interested in creating gains and alleviating pains in the fundamentals of my paper - transcription/translation of music and language (especially language at this stage). Nevertheless, as I discussed this job in the previous scoping exercise, I will evaluate it here.
+
+I will first decompose this task. Of the references that I have used, I need to order them, format them into whatever referencing style I need, and make sure that all in-text references are properly cited. I would then need to check that each page is correctly formatted with properly-sized borders, properly-placed titles, and correctly-sized font with the appropriate typeface. I would need to do this for every page.
+
+Computationally, For the Bibliography and discography, I would likely need to give the computer commands to follow such as "journal=[properly-formatted journal name]" and "year=[properly-formatted year]". I would then designate each part of my references as being \textit{journal, year, author, place of publication,}etc. Finally, I would have to give the computer a command to reorder every separate reference, or paragraph, into alphabetical order, with A at the top and Z at the bottom.
+
+For the formatting of the pages, I would have to tell the computer to apply a certain font to the whole text. I would also have to identify and designate "titles" and "subtitles", and format them accordingly. Finally, I would have to designate the size of the borders for the document, and format them for the page-by-page accordingly.
+
+The steps would therefore go like this:
+
+Bibiography:
+\begin{enumerate}
+\item Find references
+\item Use references
+\item Write down references and in-text citations
+\item Format references
+\item Order References
+\item Check in-text citations
+\end{enumerate}
+Formatting:
+\begin{enumerate}
+\item Check font
+\item Fix general font
+\item Fix title font
+\item Fix subtitle font
+\item Set page borders
+\end{enumerate}
+
+
+
+
+\end{document}
